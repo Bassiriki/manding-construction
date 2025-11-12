@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/projets/structure-metallique":{},"/projets/panneaux-solaires":{},"/projets/chateau-eau":{},"/projets/fondations-batiment":{},"/projets/menuiserie-metallique":{},"/projets/aquaculture":{}},"dynamicRoutes":{"/projets/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/projets/[slug]","routeRegex":"^\\/projets\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"41ef67b19a2631d357ab95f2bc25e4a3","previewModeSigningKey":"9b9fad6baebebad5d2482c31083fc89ac1de4cd6fbcb201843819d78d3cf3ff2","previewModeEncryptionKey":"fe722b46fa2b5d24dbfe11650d5113fd56bbe35b4b6d984efa3246056adf76e6"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "059d124cc4e991e53d1089e57eb6e89c",
+    "previewModeSigningKey": "496b838115c612106a314439d4c49a9846c21820e0f8a6cf0d4b81139f39d616",
+    "previewModeEncryptionKey": "620c43b9c209604774dc6eed5167a69d05edd50f44f36c00079017bc57d61c28"
+  }
+}

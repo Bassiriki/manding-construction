@@ -3,38 +3,48 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Building2, Sun, Droplets, Wrench, HardHat, Zap } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
+import { useRouter } from "next/navigation" // ✅ pour la navigation entre pages
 
 const services = [
   {
     icon: Building2,
     title: "Structures Métalliques",
+    href: "/structuresmetal", // ✅ chemin correct sans /app
     description:
       "Conception et installation de structures métalliques robustes pour tous types de bâtiments industriels et commerciaux.",
   },
   {
     icon: Sun,
     title: "Installations Solaires",
+    href: "/installations-solaires",
     description:
       "Solutions d'énergie renouvelable avec installation de panneaux solaires et systèmes photovoltaïques performants.",
   },
   {
     icon: Droplets,
     title: "Infrastructures Hydrauliques",
-    description: "Construction de châteaux d'eau, systèmes de distribution et infrastructures de gestion des eaux.",
+    href: "/infrastructures-hydrauliques",
+    description:
+      "Construction de châteaux d'eau, systèmes de distribution et infrastructures de gestion des eaux.",
   },
   {
     icon: Wrench,
     title: "Maintenance Industrielle",
-    description: "Services de maintenance préventive et corrective pour garantir la longévité de vos installations.",
+    href: "/maintenance-industrielle",
+    description:
+      "Services de maintenance préventive et corrective pour garantir la longévité de vos installations.",
   },
   {
     icon: HardHat,
     title: "Gestion de Projets",
-    description: "Accompagnement complet de vos projets, de la conception à la livraison, avec suivi rigoureux.",
+    href: "/gestion-projets",
+    description:
+      "Accompagnement complet de vos projets, de la conception à la livraison, avec suivi rigoureux.",
   },
   {
     icon: Zap,
     title: "Installations Électriques",
+    href: "/installations-electriques",
     description:
       "Mise en place de systèmes électriques conformes aux normes pour bâtiments industriels et résidentiels.",
   },
@@ -43,6 +53,7 @@ const services = [
 export function Services() {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
+  const router = useRouter() // ✅ hook de navigation Next.js
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -65,7 +76,9 @@ export function Services() {
     <section ref={sectionRef} id="services" className="py-20 md:py-28 bg-background">
       <div className="container mx-auto px-4">
         <div
-          className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          className={`text-center mb-16 transition-all duration-1000 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">Nos Services d'Excellence</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
@@ -79,21 +92,12 @@ export function Services() {
             return (
               <Card
                 key={index}
+                id={`service-${index}`}
+                onClick={() => router.push(service.href)} // ✅ redirection directe
                 className={`border-2 hover:border-primary transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group cursor-pointer ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
-                onClick={() => {
-                  // Animation de clic
-                  const card = document.getElementById(`service-${index}`)
-                  if (card) {
-                    card.style.transform = "scale(0.95)"
-                    setTimeout(() => {
-                      card.style.transform = ""
-                    }, 150)
-                  }
-                }}
-                id={`service-${index}`}
               >
                 <CardHeader>
                   <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">

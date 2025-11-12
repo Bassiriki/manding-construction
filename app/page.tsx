@@ -7,6 +7,7 @@ import { About } from "@/components/about"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
 import  Carroussel  from "@/components/carroussel"
+ 
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <About />
       <Contact />
       <Footer />
+       
     </main>
   )
 }

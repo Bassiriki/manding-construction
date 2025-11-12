@@ -1,5 +1,9 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
+  "/infrastructures-hydrauliques/page": "app/infrastructures-hydrauliques/page.js",
+  "/installations-electriques/page": "app/installations-electriques/page.js",
+  "/installations-solaires/page": "app/installations-solaires/page.js",
+  "/maintenance-industrielle/page": "app/maintenance-industrielle/page.js",
   "/page": "app/page.js",
-  "/projets/[slug]/page": "app/projets/[slug]/page.js"
+  "/structuresmetal/page": "app/structuresmetal/page.js"
 }

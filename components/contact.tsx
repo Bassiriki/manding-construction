@@ -137,7 +137,7 @@ export function Contact() {
                   </div>
                   <Button
                     type="submit"
-                    className="w-full bg-primary hover:bg-primary/90 hover:scale-105 transition-transform duration-300"
+                    className="w-full  bg-[#057040] hover:scale-105 transition-transform duration-300"
                     size="lg"
                   >
                     Envoyer le message
@@ -149,9 +149,9 @@ export function Contact() {
 
           <div className="space-y-6">
             {[
-              { icon: Phone, title: "Téléphone", content: "+223 75 00 90 32 ", delay: 200 },
-              { icon: Mail, title: "Email", content: "contact@mandingconsulting.com", delay: 300 },
-              { icon: MapPin, title: "Adresse", content: "Bamako, Mali", delay: 400 },
+              { icon: Phone, title: "Téléphone", content: "+223 66 85 54 22 ", delay: 200 },
+              { icon: Mail, title: "Email", content: "mandingconstructionmali@gmail.com", delay: 300 },
+              { icon: MapPin, title: "Adresse", content: "Bamako, Mali , Baco Djicoroni ACI ,Bamako", delay: 400 },
             ].map((item, index) => {
               const Icon = item.icon
               return (

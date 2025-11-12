@@ -3,7 +3,7 @@
 import { useEffect, useState, useCallback } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
-const images = ["/f1.jpeg", "/f2.jpeg", "/f3.jpeg", "/f4.jpeg", "/f5.jpeg"]
+const images = ["/f1.jpeg", "/f2.jpeg", "/h1.jpg", "/h2.jpeg", "/m1.jpeg", "/m2.jpeg", "/m3.jpeg", "/m4.jpeg", "/h3.jpeg", "/h4.jpeg", "/h5.jpeg", "/h6.jpeg", "/h7.jpeg", "/h8.jpeg", "/h9.jpeg"]
 
 interface CarouselCardProps {
   title?: string

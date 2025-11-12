@@ -5,7 +5,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-secondary text-secondary-foreground">
+    <footer className="bg-[#057040] text-secondary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
@@ -83,11 +83,14 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2 text-secondary-foreground/80">
                 <Phone className="h-4 w-4" />
-                <span>+223 XX XX XX XX</span>
+                <span>+223 66 85 54 22</span>
+                  <span>+223 44 54 40 06</span>
+                
+
               </li>
               <li className="flex items-center gap-2 text-secondary-foreground/80">
                 <Mail className="h-4 w-4" />
-                <span>contact@mandingconsulting.com</span>
+                <span>mandingconstructionmali@gmail.com</span>
               </li>
             </ul>
             <div className="flex gap-4 mt-4">
